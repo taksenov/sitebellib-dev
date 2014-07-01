@@ -1,0 +1,70 @@
+{% extends "registration/base_login.html" %}
+{% block content %}
+
+<div class="content">
+  <div class="container">
+
+      <div class="register">
+          <div class="row">
+            <div class="span6">
+              <h2>Регистрация новой учетной записи</h2>
+              <p class="big grey">Внимательно прочтите правила регистрации учетной записи</p>
+              <p>
+                  Для того чтобы зарегистрироваться, вам необходимо:
+                  в форме регистрации, расположенной справа, ввести
+                  ваши регистрационные данные.
+              </p>
+              <p>
+                  <strong>Поле &laquo;Имя пользователя&raquo;.</strong> Введите имя пользователя в следующем формате: Первая буква имени + Фамилия. Возможен ввод как русскими, так и английскими буквами.
+                  Например: Иванов Иван Иванович = ИИванов или IIvanov
+              </p>
+              <p>
+                  <strong>Поле &laquo;E-mail&raquo;.</strong> Введите адрес электронной почты,
+                  на него будет отправлено сообщение о подтверждении регистрации.
+              </p>
+              <p>
+                  <strong>Поле &laquo;Пароль&raquo;.</strong> Придумайте и введите пароль.
+              </p>
+              <p>
+                  <br>
+              </p>
+                <ul>
+                    <li><a href="{% url 'auth_password_reset' %}">Забыли пароль?</a></li>
+                    <li><a href="{% url 'auth_login' %}">Вход для зарегистрированных пользователей</a></li>
+                </ul>
+            </div>
+
+            <div class="span6">
+              <div class="formy">
+                 <h5>Форма для регистрации</h5>
+                      <div class="form">
+                        <form method="post" action="" class="form-horizontal"> {% csrf_token %}
+                            <dl class="register">
+                            {% for field in form %}
+                                <dt>{{ field.label_tag }}</dt>
+                                <dd class="clearfix">{{ field }}
+                                {% if field.help_text %}<div class="clearfix">{{ field.help_text }}</div>{% endif %}
+                                {% if field.errors %}<div class="myerrors clearfix">{{ field.errors }}</div>{% endif %}
+                                </dd>
+                            {% endfor %}
+                            </dl>
+                          <!-- Buttons -->
+                          <div class="form-actions-ta">
+                             <!-- Buttons -->
+                            <button type="submit" class="btn" value="Зарегистрироваться" / class="clearfix">Зарегистрироваться</button>
+                          </div>
+                        </form>
+
+                      </div>
+              </div>
+
+            </div>
+          </div>
+      </div>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

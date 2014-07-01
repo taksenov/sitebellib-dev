@@ -1,0 +1,11 @@
+﻿SELECT  b.Name
+       ,b.Inventory
+       ,a.Name
+FROM  elcat_author a
+     ,elcat_book b
+     ,elcat_book_author_id ba
+WHERE 1=1
+      AND ba.book_id = b.Book_id
+      AND ba.author_id = a.author_id
+      AND a.Name LIKE '%Волков%'
+;

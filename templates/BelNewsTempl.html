@@ -1,0 +1,102 @@
+{% extends "base.html"  %}
+{% block content %}
+
+<div class="content">
+  <div class="container">
+
+    <h2>Электронные ресурсы.</h2>
+    <p class="big grey">На странице представлена таблица со списком оцифрованных документов Белоярской ЦБС. В данный список, разделенный по годам, включена газета &laquo;Белоярские вести&raquo;. </p>
+    <hr />
+
+    <div class="row">
+
+      <div class="span12">
+
+          <div class="pagination pull-right">
+              <ul>
+                  <!--  <li><a href="#">Prev</a></li> -->
+                  <li><a href="http://127.0.0.1:8000/qdlist/1989/">1989</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1990/">1990</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1991/">1991</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1992/">1992</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1993/">1993</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1994/">1994</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1995/">1995</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1996/">1996</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1997/">1997</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1998/">1998</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1999/">1999</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/2001/">2001</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/2002/">2002</a></li>
+                  <!--  <li><a href="#">Next</a></li> -->
+              </ul>
+          </div>
+          <div class="clearfix"></div>
+
+        <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Название</th>
+            <th>Дата</th>
+            <th>N порядковый</th>
+            <th>N с начала издания</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for row in resultsqdlist %}
+
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td><a href="{{ row.4 }}{{ Year }}/{{ row.5 }}_{{ Year }}_{{ row.2 }}({{ row.3|default_if_none:"" }}){{ row.6|default_if_none:"" }}.pdf">{{ row.0 }}</a> </td>
+            <td>{{ row.1 }}</td>
+            <td>{{ row.2 }}</td>
+            <td>
+
+            {{ row.3|default_if_none:"" }}
+
+            </td>
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+        </table>
+
+          <div class="pagination pull-right">
+              <ul>
+                  <!--  <li><a href="#">Prev</a></li> -->
+                  <li><a href="http://127.0.0.1:8000/qdlist/1989/">1989</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1990/">1990</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1991/">1991</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1992/">1992</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1993/">1993</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1994/">1994</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1995/">1995</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1996/">1996</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1997/">1997</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1998/">1998</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/1999/">1999</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/2001/">2001</a></li>
+                  <li><a href="http://127.0.0.1:8000/qdlist/2002/">2002</a></li>
+                  <!--  <li><a href="#">Next</a></li> -->
+              </ul>
+          </div>
+          <div class="clearfix"></div>
+
+      </div>
+
+    </div>
+
+ 
+
+
+
+
+<!-- Product & links ends --> 
+
+  </div>
+</div>
+
+{% endblock %}

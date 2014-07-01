@@ -1,0 +1,68 @@
+﻿{% extends "registration/base_login.html" %}
+{% block content %}
+
+
+<div class="content" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+  <div class="container">
+
+          <div class="register">
+              <div class="row">
+
+                <div class="span12">
+                  <div class="lrform">
+                     <h5>Введите данные для входа</h5>
+
+                        {% if user.is_authenticated %}
+                        <h6>
+                        Вы же уже авторизорваны под именем: {{ user.username }}.
+                        Вы можете продолжить работу или <a href="{% url 'auth_logout' %}">выйти</a>.<br/><br/>
+                        </h6>
+                        {% else %}
+
+                        {% if form.non_field_errors %}
+                        {{ form.non_field_errors }}
+                        {% endif %}
+
+
+
+
+                                  <div class="form">
+                                     <form method="post" action="" class="form-horizontal"> {% csrf_token %}
+                                        <dl class="register">
+                                        {% for field in form %}
+                                          <div class="control-group">
+                                            <label class="control-label-ta">{{ field.label_tag }}</label>
+                                            <div class="controls-ta">
+                                                {{ field }}
+                                                {% if field.help_text %}<div class="clearfix">{{ field.help_text }}</div>{% endif %}
+                                                {% if field.errors %}<div class="myerrors clearfix">{{ field.errors }}</div>{% endif %}
+                                            </div>
+                                          </div>
+                                        {% endfor %}
+                                        </dl>
+                                       <div class="form-actions-ta">
+                                           <button type="submit" class="btn" value="Вход111" / class="clearfix">Вход</button>
+                                       </div>
+                                    </br>
+                                    <ul>
+                                        <li><a href="{% url 'auth_password_reset' %}">Забыли пароль?</a></li>
+                                        <li>Если вы не зарегистрированы, <a href="{% url 'registration_register' %}">воспользуйтесь формой регистрации</a></li>
+                                    </ul>
+                                     </form>
+
+                                  {% endif %}
+                                    </div>
+                                  </div>
+
+                </div>
+              </div>
+           </div>
+         </div>
+</div>
+
+<script type="text/javascript">
+document.getElementById('id_username').focus()
+</script>
+
+
+{% endblock %}

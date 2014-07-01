@@ -1,0 +1,68 @@
+{% extends "base.html"  %}
+{% block content %}
+
+<div class="content">
+  <div class="container">
+
+  <h2>Документы организации.</h2>
+  <p class="big grey">Отчетность и регламентирующие документы.</p>
+  <hr />
+
+              <!-- FAQ -->
+              <div class="accordion" id="accordion2">
+                 <!-- Each item should be enclosed inside the class "accordion-group". Note down the below markup. -->
+                 <!-- First Accordion -->
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                       <!-- Title with experience details. -->
+                      <h5>Отчеты.</h5>
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                       <!-- Details about job -->
+                      <p> <a href="http://yadi.sk/d/R4EqFPbK57k8u">Отчет о деятельности автономного учреждения за 2012 год.</a> </p>
+                      <p> <a href="http://yadi.sk/d/LFsgPT92M9sSV">Отчет о деятельности автономного учреждения за 2013 год.</a> </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Second Accordion -->
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                      <h5> Регламентирующие документы. </h5>
+                    </a>
+                  </div>
+                  <div id="collapseTwo" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      <p> <a href="http://yadi.sk/d/1zzDd3xNLmWPA">Административный регламент предоставления муниципальной услуги «Предоставление доступа к оцифрованным изданиям, хранящимся в библиотеках,  в том числе к фонду редких книг, с учетом соблюдения требований законодательства Российской Федерации об авторских и смежных правах»</a> </p>
+                      <br>
+                      <p> <a href="http://yadi.sk/d/-tNj_TbULmWNh">Административный регламент предоставления муниципальной услуги «Предоставление доступа к справочно – поисковому аппарату библиотек, базам данных»</a> </p>
+                      <br>
+                      <p> <a href="http://yadi.sk/d/gVFaYIO6BPH9R">Стандарт качества муниципальной услуги «Предоставление библиотечных услуг»</a> </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Thrid accordion -->
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">
+                      <h5> Краеведческий календарь. </h5>
+                    </a>
+                  </div>
+                  <div id="collapseThree" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      <p> <a href="http://yadi.sk/d/nXlvwGnjPPYC8">Краеведческий календарь 2014 г.</a> </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fourth accordion -->
+
+              </div>
+
+
+  </div>
+</div>
+
+{% endblock %}

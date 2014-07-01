@@ -1,0 +1,83 @@
+{% extends "registration/base_login.html" %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+<div class="content" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+  <div class="container">
+
+          <div class="register">
+              <div class="row">
+
+                <div class="span12">
+                  <div class="lrform">
+
+
+                        <h5>Данные пользователя: {{ user }} </h5>
+
+<form enctype="multipart/form-data" method="post" action="" style="margin-top:20px;">
+
+	{% csrf_token %}
+
+        <div class="fieldWrapper">
+            Электронная почта:
+            {{ user.email }} <br />
+        </div>
+
+        <p>
+            <br>
+        </p>
+{#<div class="fieldWrapper">#}
+{#{{form.email.label_tag}}#}
+{#{{form.email}}<br />#}
+{#{{form.email.help_text}}#}
+{#</div>    #}
+
+        {#===================================#}
+        <div class="fieldWrapper">
+        {{form.as_p}}
+        </div>
+        {#===================================#}
+
+    	<p><input class="button blue" type="submit" value="Сохранить" /> </p>
+
+</form>
+
+
+{#                        <form method="POST" action=""> {% csrf_token %}#}
+{#                            <!-- добавлено для теста -->#}
+{##}
+{#                            {{ formset.management_form }}#}
+{#                            {% for form in formset %}#}
+{#                                {{ form }}#}
+{#                            {% endfor %}#}
+{##}
+{#                            <br>#}
+{##}
+{#                            <input type="submit" name="submit" value="Update" id="submit">#}
+{#                        </form>#}
+
+
+{#     {% if main_form %}#}
+{#     <form action="." method="POST">{% csrf_token %}#}
+{#         {{ formset.management_form }}#}
+{#         <table>#}
+{#             {{main_form.as_table}}#}
+{#             {% for form in formset.forms %}#}
+{#                 <table>{{ form }}</table>#}
+{#             {% endfor %}#}
+{#         </table>#}
+{#         <p><input type="submit" name="submit" value="Submit" class="button"></p>#}
+{#     </form>#}
+{#     {% endif %}#}
+
+
+                </div>
+              </div>
+           </div>
+         </div>
+</div>
+
+
+
+{% endblock content %}

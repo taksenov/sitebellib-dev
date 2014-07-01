@@ -1,0 +1,79 @@
+{% extends "base.html"  %}
+{% block content %}
+
+<div class="content">
+  <div class="container">
+
+  <h2>Помощь по сайту.</h2>
+  <p class="big grey">Ниже размещены вопросы и ответы помогающие в работе с нашим сайтом. Нажимайте на интереующий вас вопрос, чтобы увидеть ответ на него. Если вы не нашли ответ на ваш вопрос, то вы можете его задать по адресу электронной почты:  <a href="mailto:bellib@127.0.0.1:8000">bellib@127.0.0.1:8000</a>. </p>
+  <hr />
+
+              <!-- FAQ -->
+              <div class="accordion" id="accordion2">
+                 <!-- Each item should be enclosed inside the class "accordion-group". Note down the below markup. -->
+                 <!-- First Accordion -->
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                       <!-- Title with experience details. -->
+                      <h5>Как узнать новости о библиотеках?</h5>
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                       <!-- Details about job -->
+                      <p>Все актуальные новости и события из жизни библиотек оперативно публикуются в профилях МАУК Белоярской ЦБС в социальных сетях: <a href="http://www.facebook.com/bellibru">Facebook</a>, <a href="https://twitter.com/bellibru1">Twitter</a>, <a href="http://vk.com/bellib">ВКонтакте</a></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Second Accordion -->
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                      <h5>Как узнать адреса и график работы библиотек?</h5>
+                    </a>
+                  </div>
+                  <div id="collapseTwo" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      <p>Данную информацию можно найти на страницах: <a href="http://127.0.0.1:8000/aboutus/">О нас</a> и <a href="http://127.0.0.1:8000/contactus/">Контакты</a></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Thrid accordion -->
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                      <h5>Какие услуги включает в себя электронная библиотека?</h5>
+                    </a>
+                  </div>
+                  <div id="collapseThree" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      <p>Электронная библиотека предоставляет доступ к <a href="http://127.0.0.1:8000/elcat/">электронному каталогу библиотеки</a> и к <a href="http://127.0.0.1:8000/qdlist/1989/">базе данных с оцифрованными документами</a>.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- 4 Accordion -->
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                       <!-- Title with experience details. -->
+                      <h5>Где найти отчетность и регламентирующие документы организации?</h5>
+                    </a>
+                  </div>
+                  <div id="collapseFour" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                       <!-- Details about job -->
+                      <p>Отчетность и регламентирующая документация расположена по ссылке: <a href="http://127.0.0.1:8000/reports/">Документы</a>.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}
