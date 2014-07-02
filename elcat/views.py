@@ -9,9 +9,6 @@ from django.template import Context, loader, RequestContext
 from django.shortcuts import render_to_response
 from django.contrib.admin.views.decorators import staff_member_required
 from elcat.models import *
-# не показывается залогиненный юзер
-from django.views.decorators.csrf import csrf_protect
-from django.utils.safestring import mark_safe
 
 # Вывод страницы c формой поиска в электронном каталоге
 def elcat_index(request):
@@ -208,6 +205,7 @@ def elcat_search(request):
     # возвращает общую страницу с результатами поискового запроса
     return HttpResponse(html)
 
+#==================================================================================
 # Отчет о количестве(%) книг в электронном каталоге и в ЦБС + разрез по бибилотекам
 #@staff_member_required
 def elcat_adm_report_books(request):
@@ -269,9 +267,3 @@ def elcat_adm_report_books(request):
                                  'books_in_libraryes_count': books_in_libraryes_count,
                                  'books_total' : books_total}))
     return HttpResponse(html)
-
-
-# Вывод страницы c профилем пользователя
-# todo убрать!
-# def elcat_user_profile(request):
-#     return render_to_response('registration/profile.html')
