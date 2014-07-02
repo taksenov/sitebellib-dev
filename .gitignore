@@ -14,5 +14,4 @@ settings.py
  
 #directories to ignore
 .idea/
-temp/
 /temp
