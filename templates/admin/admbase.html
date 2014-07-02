@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<!--<html lang="en">       -->
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Белоярская ЦБС</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="twinpix@yandex.ru">
+
+
+    <!-- Stylesheets -->
+    <link href="/static/style/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style/font-awesome.css">
+    <link rel="stylesheet" href="/static/style/whhg.css">
+    <link href="/static/style/prettyPhoto.css" rel="stylesheet">
+    <!-- Parallax slider -->
+    <link rel="stylesheet" href="/static/style/slider.css">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="/static/style/flexslider.css">
+
+    <link href="/static/style/style.css" rel="stylesheet">
+
+    <!-- Colors - Orange, Purple, Light Blue (lblue), Red, Green and Blue -->
+    <link href="/static/style/lblue.css" rel="stylesheet">
+
+    <link href="/static/style/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 Support for IE -->
+    <!--[if lt IE 9]>
+    <script src="/static/js/html5shim.js"></script>
+    <![endif]-->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/static/img/favicon/favicon.png">
+</head>
+
+<body>
+
+<!-- Header Starts -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div>
+                    <h6>Административный интерфейс: Белоярская ЦБС. Пользователь: {{ user.last_name }} {{ user.first_name }} </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation bar starts -->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span>Menu</span>
+            </a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <!--
+                    <li><a href="index.html">Home #1</a></li>
+                    <li><a href="index1.html">Home #2</a></li>
+                    -->
+                    <!-- Refer Bootstrap navbar doc -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-laptop"></i> Электронная библиотека <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://elcat.bellib.ru/"> Каталог </a></li>
+                            <li><a href="BelNews1989.html"> Ресурсы </a></li>
+                            <li><a href="#"> Виртуальная справка </a></li>
+                            <!--
+                            <li><a href="support.html">Support</a></li>
+                            <li><a href="sitemap.html">Sitemap</a></li>
+                            <li><a href="timeline.html">Timeline</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="register1.html">Register</a></li>
+                            <li><a href="login1.html">Login</a></li>
+                              -->
+                        </ul>
+                    </li>
+                    <!--
+                    <li class="dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages #2<b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                         <li><a href="coming-soon.html">Coming Soon</a></li>
+                         <li><a href="features-4.html">Features</a></li>
+                         <li><a href="statement.html">Statement</a></li>
+                         <li><a href="tasks.html">Tasks</a></li>
+                         <li><a href="resume.html">Resume</a></li>
+                         <li><a href="projects.html">Projects</a></li>
+                         <li><a href="make-post.html">Make Post</a></li>
+                         <li><a href="events.html">Events</a></li>
+                         <li><a href="error-log.html">Error Log</a></li>
+                       </ul>
+                    </li>
+                    <li><a href="service.html">Service</a></li>
+                    -->
+                    <li><a href="aboutus.html"> О нас </a></li>
+                    <!--
+                    <li class="dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                         <li><a href="blog-2.html">Blog #1</a></li>
+                         <li><a href="blog-4.html">Blog #1</a></li>
+                         <li><a href="blog-single.html">Blog Single</a></li>
+                       </ul>
+                     </li>
+
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    -->
+                    <li><a href="contactus.html"> Контакты </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation bar ends -->
+
+{% block content %}{% endblock %}
+
+<!-- Product & links ends --> 
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+
+            <div class="span12">
+                <div class="copy">
+                    <h6>Белоярская <span class="color">ЦБС</span>.</h6>
+                    <p>Copyright &copy; 2013 <a href="index.html">Главная</a> | <a href="aboutus.html">О нас</a> | <a href="faq.html">Помощь по сайту</a> | <a href="contactus.html">Контакты</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/jquery.isotope.js"></script> <!-- Isotope for gallery -->
+<script src="/static/js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto for images -->
+<script src="/static/js/jquery.cslider.js"></script> <!-- Parallax slider -->
+<script src="/static/js/modernizr.custom.28468.js"></script>
+<script src="/static/js/filter.js"></script> <!-- Filter for support page -->
+<script src="/static/js/cycle.js"></script> <!-- Cycle slider -->
+<script src="/static/js/jquery.flexslider-min.js"></script> <!-- Flex slider -->
+<script src="/static/js/jquery.tweet.js"></script> <!-- jQuery Twitter -->
+<script src="/static/js/easing.js"></script> <!-- Easing -->
+<script src="/static/js/custom.js"></script>
+</body>
+</html>

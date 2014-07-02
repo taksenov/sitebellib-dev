@@ -207,7 +207,7 @@ def elcat_search(request):
 
 #==================================================================================
 # Отчет о количестве(%) книг в электронном каталоге и в ЦБС + разрез по бибилотекам
-#@staff_member_required
+@staff_member_required
 def elcat_adm_report_books(request):
     # счетчик всех книг из таблицы elcat_book
     adm_report_books = connection.cursor()
@@ -260,10 +260,12 @@ def elcat_adm_report_books(request):
     books_in_libraryes_count = tuple(books_in_libraryes_count)
 
     # формирование шаблона
-    templ = get_template('AdmElcatReport.html')
+    templ = get_template('admin/AdmElcatReport.html')
     html = templ.render(Context({'books_in_table' : books_in_table,
                                  'book_percent': book_percent,
                                  'books_in_libraryes': books_in_libraryes,      # лишнее
                                  'books_in_libraryes_count': books_in_libraryes_count,
-                                 'books_total' : books_total}))
+                                 'books_total' : books_total,
+                                 'user': request.user
+                                }))
     return HttpResponse(html)
