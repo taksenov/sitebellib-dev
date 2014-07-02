@@ -1,15 +1,21 @@
-sitebellib-dev
+п»їsitebellib-dev
 ==============
 
-Версия сайта для разработки.
-
-==============
-
-Для развертывания на тестовом сервере.
+Р’РµСЂСЃРёСЏ СЃР°Р№С‚Р° РґР»СЏ СЂР°Р·СЂР°Р±РѕС‚РєРё.
 
 ==============
 
-В проекте используются стороннние проекты:
-1) Форк 'django-profiles': https://bitbucket.org/richert/django-profiles
-2) Приложение 'django-profiles': https://bitbucket.org/ubernostrum/django-registration/wiki/Home
-3) Приложение 'phone_field': https://pypi.python.org/pypi/django-phonenumber-field/0.2a3
+Р”Р»СЏ СЂР°Р·РІРµСЂС‚С‹РІР°РЅРёСЏ РЅР° С‚РµСЃС‚РѕРІРѕРј СЃРµСЂРІРµСЂРµ.
+
+==============
+
+Р’ РїСЂРѕРµРєС‚Рµ РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ СЃС‚РѕСЂРѕРЅРЅРЅРёРµ РїСЂРѕРµРєС‚С‹:
+==============
+1) Р¤РѕСЂРє 'django-profiles': 
+https://bitbucket.org/richert/django-profiles
+==============
+2) РџСЂРёР»РѕР¶РµРЅРёРµ 'django-profiles': 
+https://bitbucket.org/ubernostrum/django-registration/wiki/Home
+==============
+3) РџСЂРёР»РѕР¶РµРЅРёРµ 'phone_field': 
+https://pypi.python.org/pypi/django-phonenumber-field/0.2a3
