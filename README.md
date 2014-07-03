@@ -21,4 +21,4 @@ https://bitbucket.org/ubernostrum/django-registration/wiki/Home
 https://pypi.python.org/pypi/django-phonenumber-field/0.2a3
 
 4) Приложение 'django-recaptcha':
-https://code.google.com/p/django-ru/downloads/detail?name=django-recaptcha.tar.gz&can=2&q=
+https://github.com/praekelt/django-recaptcha
