@@ -1,3 +1,5 @@
+# coding=utf-8
+
 """
 Forms and validation code for user registration.
 
@@ -8,11 +10,11 @@ you're using a custom model.
 
 """
 
-
 from django.contrib.auth.models import User
 from django import forms
 from django.utils.translation import ugettext_lazy as _
-
+# reCAPTCHA
+from captcha.fields import ReCaptchaField
 
 class RegistrationForm(forms.Form):
     """
@@ -38,7 +40,13 @@ class RegistrationForm(forms.Form):
                                 label=_("Password"))
     password2 = forms.CharField(widget=forms.PasswordInput,
                                 label=_("Password (again)"))
-    
+
+    # reCAPTCHA
+    captcha = ReCaptchaField(attrs={ 'theme' : 'white',
+                                     'lang' : 'ru', },
+                             label = u'Символы с картинки'
+                             )
+
     def clean_username(self):
         """
         Validate that the username is alphanumeric and is not already
