@@ -6,7 +6,8 @@
  
 #files to ignore
 settings.py
- 
+sitebellib.ini
+
 #extensions to ignore
 *.log
 *.pot
@@ -15,3 +16,9 @@ settings.py
 #directories to ignore
 .idea/
 /temp
+# ignore at dev-server
+/env
+/logs
+/pids
+/servstatic
+/sphinx
