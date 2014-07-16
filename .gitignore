@@ -16,6 +16,7 @@ sitebellib.ini
 #directories to ignore
 .idea/
 /temp
+/static/SQLs/
 # ignore at dev-server
 /env
 /logs
