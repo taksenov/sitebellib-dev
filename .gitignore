@@ -17,6 +17,7 @@ sitebellib.ini
 .idea/
 /temp
 /static/SQLs/
+
 # ignore at dev-server
 /env
 /logs
