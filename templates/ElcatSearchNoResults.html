@@ -26,15 +26,16 @@
                     </ul>
                     <div id="myTabContent" class="tab-content">
                       <div class="tab-pane fade in active" id="search">
-                        <p>
+                        {% comment %}<p>{% endcomment %}
                           <div class="input-append">
                             <form action="/elcatsearch/" method="get">
-                              <input class="input-xxlarge" name="q" size="16" type="text" placeholder="Запрос...+Enter">
+                              <input class="{% comment %}input-xxlarge{% endcomment %} input-tslarge" name="q" size="16" type="text" placeholder="Введите новый запрос...">
+                              <button type="submit" class="btn btn-primary btn-lg">Найти</button>
                             </form>
                           </div>
-                        </p>
+                        {% comment %}</p>{% endcomment %}
 
-                        <p>
+                        <p class="SearchNoResults">
                            Поиск не дал результатов. Пожалуйста, попробуйте поменять условия вашего запроса.
                         </p>
 

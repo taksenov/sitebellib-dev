@@ -1,7 +1,7 @@
-/* Внимание! в данный файл внесено значительное количество локальных правок, поэтому прежде чем */
-/* его обновлять нужно найти в нем все вхождения с правками отмеченные "TAksenov" */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ */
+/* пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ "TAksenov" */
 
-/* TAksenov 29-03-2013 замена стандартного шрифта на кириллическую версию шрифта, используемого в шаблоне
+/* TAksenov 29-03-2013 пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700');
 */
 @import url('http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext:300,400italic,700italic,400,700');
@@ -271,13 +271,13 @@ input.search-query{padding-right:14px;padding-right:4px \9;padding-left:14px;pad
 .form-search .radio input[type="radio"],.form-search .checkbox input[type="checkbox"],.form-inline .radio input[type="radio"],.form-inline .checkbox input[type="checkbox"]{float:left;margin-right:3px;margin-left:0;}
 .control-group{margin-bottom:10px;}
 legend+.control-group{margin-top:20px;-webkit-margin-top-collapse:separate;}
-/* 18-03-2014 TAksenov расширен разимер для теста в форме авторизации на сайте */
+/* 18-03-2014 TAksenov пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
 .form-horizontal .control-group-ta{margin-bottom:20px;*zoom:1;}.form-horizontal .control-group:before,.form-horizontal .control-group:after{display:table;content:"";line-height:0;}
 .form-horizontal .control-group-ta:after{clear:both;}
 /* =========================================================================== */
 .form-horizontal .control-group{margin-bottom:20px;*zoom:1;}.form-horizontal .control-group:before,.form-horizontal .control-group:after{display:table;content:"";line-height:0;}
 .form-horizontal .control-group:after{clear:both;}
-/* 18-03-2014 TAksenov расширен разимер для теста в форме авторизации на сайте */
+/* 18-03-2014 TAksenov пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
 .form-horizontal .control-label-ta{float:left;width:120px;padding-top:5px;text-align:right;}
 .form-horizontal .controls-ta{*display:inline-block;*padding-left:10px;margin-left:130px;*margin-left:0;}.form-horizontal .controls:first-child{*padding-left:200px;}
 /* =========================================================================== */
@@ -285,7 +285,7 @@ legend+.control-group{margin-top:20px;-webkit-margin-top-collapse:separate;}
 .form-horizontal .controls{*display:inline-block;*padding-left:20px;margin-left:180px;*margin-left:0;}.form-horizontal .controls:first-child{*padding-left:180px;}
 .form-horizontal .help-block{margin-bottom:0;}
 .form-horizontal input+.help-block,.form-horizontal select+.help-block,.form-horizontal textarea+.help-block,.form-horizontal .uneditable-input+.help-block,.form-horizontal .input-prepend+.help-block,.form-horizontal .input-append+.help-block{margin-top:10px;}
-/* 18-03-2014 TAksenov расширен разимер для теста в форме авторизации на сайте */
+/* 18-03-2014 TAksenov пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
 .form-horizontal .form-actions-ta{padding-left:130px;}
 /* =========================================================================== */
 .form-horizontal .form-actions{padding-left:180px;}
@@ -515,7 +515,9 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 .btn-large{padding:22px 30px;font-size:22px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}
 
 /* TAksenov 05-11-2013 input-tslarge */
-.input-tslarge {
+/* Р’РЅРёРјР°РЅРёРµ 20-08-2014 РїРµСЂРµРЅРµСЃРµРЅРѕРІ С„Р°Р№Р»
+   style.css */
+/*.input-tslarge {
                 width: 210px;
                 height: 18px !important;
                 margin-bottom: 10px !important;
@@ -528,7 +530,7 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
                }
 .input-tslarge[class=input-tslarge] {
                                      width: 480px;
-                                    }
+                                    }*/
 /* TAksenov 05-11-2013 input-tslarge */
 
 .btn-large [class^="icon-"],.btn-large [class*=" icon-"]{margin-top:4px;}
@@ -544,8 +546,8 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
 .btn-primary{color:#ffffff;text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);background-color:#0f82f5;background-image:-moz-linear-gradient(top, #1a8cff, #0072e6);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#1a8cff), to(#0072e6));background-image:-webkit-linear-gradient(top, #1a8cff, #0072e6);background-image:-o-linear-gradient(top, #1a8cff, #0072e6);background-image:linear-gradient(to bottom, #1a8cff, #0072e6);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1a8cff', endColorstr='#ff0072e6', GradientType=0);border-color:#0072e6 #0072e6 #004c99;border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*background-color:#0072e6;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);}.btn-primary:hover,.btn-primary:active,.btn-primary.active,.btn-primary.disabled,.btn-primary[disabled]{color:#ffffff;background-color:#0072e6;*background-color:#0066cc;}
 .btn-primary:active,.btn-primary.active{background-color:#0059b3 \9;}
 
-/* -- TAksenov 06-11-2013 квадратная кнопка */
-/* основная кнопка */
+/* -- TAksenov 06-11-2013 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
 .ts-btn-primary
 {width:50px; height:50px; margin: 0 10px 10px 0; float:left; line-height:40px;text-align:center;
 color:
@@ -556,7 +558,7 @@ text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);background-color:
 #99CCFF;
 background-image:-moz-linear-gradient(top, #1a8cff, #0072e6);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#1a8cff), to(#0072e6));background-image:-webkit-linear-gradient(top, #1a8cff, #0072e6);background-image:-o-linear-gradient(top, #1a8cff, #0072e6);background-image:linear-gradient(to bottom, #1a8cff, #0072e6);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1a8cff', endColorstr='#ff0072e6', GradientType=0);border-color:#0072e6 #0072e6 #004c99;border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*background-color:#0072e6;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);}.btn-primary:hover,.btn-primary:active,.btn-primary.active,.btn-primary.disabled,.btn-primary[disabled]{color:#ffffff;background-color:#0072e6;*background-color:#0066cc;}
 .ts-btn-primary:active,.btn-primary.active{background-color:#0059b3 \9;}
-/* замыкающая справа кнопка */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
 .ts-btn-primary1
 {width:50px; height:50px; margin: 0 10px 10px 0; float:none; line-height:40px;text-align:center;
 color:
@@ -567,7 +569,7 @@ text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);background-color:
 #99CCFF;
 background-image:-moz-linear-gradient(top, #1a8cff, #0072e6);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#1a8cff), to(#0072e6));background-image:-webkit-linear-gradient(top, #1a8cff, #0072e6);background-image:-o-linear-gradient(top, #1a8cff, #0072e6);background-image:linear-gradient(to bottom, #1a8cff, #0072e6);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1a8cff', endColorstr='#ff0072e6', GradientType=0);border-color:#0072e6 #0072e6 #004c99;border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*background-color:#0072e6;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);}.btn-primary:hover,.btn-primary:active,.btn-primary.active,.btn-primary.disabled,.btn-primary[disabled]{color:#ffffff;background-color:#0072e6;*background-color:#0066cc;}
 .ts-btn-primary1:active,.btn-primary.active{background-color:#0059b3 \9;}
-/* -- TAksenov 06-11-2013 квадратная кнопка */
+/* -- TAksenov 06-11-2013 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ */
 
 .btn-warning{color:#ffffff;text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);background-color:#fe781e;background-image:-moz-linear-gradient(top, #ff8432, #fe6600);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ff8432), to(#fe6600));background-image:-webkit-linear-gradient(top, #ff8432, #fe6600);background-image:-o-linear-gradient(top, #ff8432, #fe6600);background-image:linear-gradient(to bottom, #ff8432, #fe6600);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff8432', endColorstr='#fffe6600', GradientType=0);border-color:#fe6600 #fe6600 #b14700;border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*background-color:#fe6600;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);}.btn-warning:hover,.btn-warning:active,.btn-warning.active,.btn-warning.disabled,.btn-warning[disabled]{color:#ffffff;background-color:#fe6600;*background-color:#e45c00;}
 .btn-warning:active,.btn-warning.active{background-color:#cb5200 \9;}
@@ -950,12 +952,12 @@ div.subnav-fixed{top:50px;}
 .pagination ul >.active>a,.pagination ul >.active>span{color:#ffffff;}
 .pagination ul >.disabled>span,.pagination ul >.disabled>a,.pagination ul >.disabled>a:hover{background-color:#eeeeee;color:#999999;}
 
-/* -- TAksenov 06-11-2013 создаем не резиновый пагинатор */
+/* -- TAksenov 06-11-2013 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .tspagination ul{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}.tspagination ul >li>a,.tspagination ul >li>span{margin-right:6px;color:#080808;}.tspagination ul >li>a:hover,.tspagination ul >li>span:hover{background-color:#080808;color:#ffffff;}
 .tspagination ul >li:last-child>a,.tspagination ul >li:last-child>span{margin-right:0;}
 .tspagination ul >.active>a,.tspagination ul >.active>span{color:#ffffff;}
 .tspagination ul >.disabled>span,.tspagination ul >.disabled>a,.tspagination ul >.disabled>a:hover{background-color:#eeeeee;color:#999999;}
-/* -- TAksenov 06-11-2013 создаем не резиновый пагинатор */
+/* -- TAksenov 06-11-2013 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 
 .pager li>a,.pager li>span{background-color:#dfdfdf;border:none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;color:#080808;}.pager li>a:hover,.pager li>span:hover{background-color:#080808;color:#ffffff;}
 .pager .disabled>a,.pager .disabled>a:hover,.pager .disabled>span{background-color:#eeeeee;color:#999999;}
