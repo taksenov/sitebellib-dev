@@ -372,7 +372,7 @@ form button{
 }
 
 form input{
-	font-size:13px !important;
+	font-size:13px /*!important*/;
 }
 
 /* Image alignment*/
@@ -2105,19 +2105,19 @@ footer .copy{
 
 }
 /* TAksenov 20-08-2014
-   кастомизация поискового инпута в elcat */
+   кастомизация поискового инпута в elcat
+   */
 .input-tslarge {
     width: 700px;
     height: 50px !important;
-    margin-bottom: 10px !important;
-    /*line-height: 20px !important;*/
     padding: 2px 2px !important;
     font-size: 46px !important;
+    margin-bottom: 10px !important;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
 }
-/*  TAksenov 20-08-2014 
+/*  TAksenov 20-08-2014
     Кнопка для поиска в ЭК */
 .btn-lg {
     width: 200px;
