@@ -58,7 +58,7 @@ def qdpselect(request, Year):
             ,qdlist_links.DomainLinkName
             ,qdlist_name.NameDocument
             ,qdlist_quantizeddoc.QDNumExtra
-        FROM qdlist_quantizeddoc
+        FROM qdlist_quantizeddoc qd
             ,qdlist_links
             ,qdlist_name
             ,qdlist_years
@@ -67,6 +67,7 @@ def qdpselect(request, Year):
             AND qdlist_quantizeddoc.year_id = qdlist_years.year_id
             AND qdlist_quantizeddoc.name_id = qdlist_name.name_id
             AND qdlist_quantizeddoc.link_id = qdlist_links.link_id
+            AND qd.Name_id in (1, 2)
         ORDER BY qdlist_quantizeddoc.QDDate;
         """, [Year])                    # Year
     resultsqdlist = qdlist.fetchall()                                           # список газет за 1989 год
