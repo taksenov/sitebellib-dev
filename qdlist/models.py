@@ -1,6 +1,28 @@
 # coding=utf-8
 from django.db import models
 
+# таблица с Категориями оцифрованного контента
+# (Периодика, Собственные издания и т.д.)
+class type(models.Model):
+    type_id = models.AutoField(primary_key=True)
+    typename = models.CharField(max_length=30, null=False)
+
+    def __unicode__(self):
+        return u'Тип оцифрованных документов: %s (ID=%s)' % (self.typename, self.type_id)
+
+# таблица с подкатегориями документов
+# у одной категрии может быть много подкатегорий, но не наоборот
+# связь один ко многим
+class subtype(models.Model):
+    subtype_id = models.AutoField(primary_key=True)
+    subtypename = models.CharField(max_length=25, null=False)
+    subtypedescription = models.CharField(max_length=25, null=False)
+    type = models.ForeignKey('type', null=True)
+    linktypename = models.CharField(max_length=1, null=False, default='s')
+
+    def __unicode__(self):
+        return self.subtypename
+
 # Таблица со списком оцифрованных документов
 class quantizeddoc(models.Model):
     QuantizedDoc_id = models.AutoField(primary_key=True)
@@ -12,14 +34,18 @@ class quantizeddoc(models.Model):
     QDNumExtra = models.CharField(max_length=11,null=True)
     Link = models.ForeignKey('links',null=True)                               # Link_id
 
+    def __unicode__(self):
+        return self.Name.NameDocumentFull
+
 #    class Meta:
 #        ordering = ['QDNumSerial']                                            # Сортируем по порядковому номеру
 
 # Таблица с названиями (торговыми марками) документов
 class name(models.Model):
     Name_id = models.AutoField(primary_key=True)
-    NameDocument = models.CharField(max_length=10)
+    NameDocument = models.CharField(max_length=64)
     NameDocumentFull = models.CharField(max_length=256)
+    subtype = models.ForeignKey('subtype',null=True)
 
     def __unicode__(self):
         return self.NameDocumentFull
@@ -40,3 +66,5 @@ class links(models.Model):
     Link_id = models.AutoField(primary_key=True)
     DomainLinkName = models.URLField()
 
+    def __unicode__(self):
+        return unicode(self.DomainLinkName)

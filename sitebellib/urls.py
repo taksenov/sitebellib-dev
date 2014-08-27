@@ -9,7 +9,7 @@ import profiles
 from profiles.views import edit_profile
 from profiles.urls import *
 from registration.views import *
-from qdlist.views import qdlist
+from qdlist.views import qdlist, qdpselect, qdspersonal
 # from elcat.views import elcat
 from elcat import views
 from elcatuserprofile.views import elcat_user_profile
@@ -36,7 +36,9 @@ urlpatterns = patterns('django.contrib.flatpages.views',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     # Ссылка на страницу со списком оцифрованных документов (газета Белоярские Вести) по годам:
-    url(r'^qdlist/(\d{4})/$', qdlist),
+    url(r'^qdlist/$', qdlist),                        # главная страница с выбором категорий оцифрованных документов
+    url(r'^qdlist/p/(\d{4})/$', qdpselect),           # внимание! гвоздь. прибита газета белоярские вести
+    url(r'^qdlist/s/$', qdspersonal),                 # собственные документы библиотеки
     # Ссылка на страницу с поиском в електронном каталоге:
     url(r'^elcat/', views.elcat_index),
     # Ссылка на страницу с результатами поиска в електронном каталоге:

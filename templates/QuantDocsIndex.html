@@ -1,0 +1,67 @@
+{% extends "base.html"  %}
+{% block content %}
+
+<div class="content">
+  <div class="container">
+
+    <h2>Электронные ресурсы</h2>
+    <p class="big grey">На странице представлены оцифрованные документы Белоярской ЦБС.</p>
+    <hr />
+
+  <div class="row">
+    <div class="span12">
+
+                    <p>
+                        <!-- Add filter names inside "data-filter". For example ".web-design", ".seo", etc., Filter names are used to filter the below images. -->
+                        <div class="button">
+                           <ul id="filters">
+                             <li><a href="#" data-filter="*">Все документы</a></li>
+
+                             {% for row in result_all_types %}
+                                <li><a href="#" data-filter=".{{ row.0 }}">{{ row.1 }}</a></li>
+                             {% endfor %}
+
+                           </ul>
+                        </div>
+                    </p>
+                        
+                        
+                    <div id="portfolio">
+                       <!-- гвоздь-->
+                       <div class="element 1">
+                           <a href="/qdlist/p/1989/" class="">
+                               <img src="/static/img/QuantDocs/tn_1.jpg" alt=""/>
+                               <!-- Portfolio caption -->
+                               <div class="pcap">
+                                  <h4>&laquo;Белоярские вести&raquo;</h4>
+                                  <p>
+                                     C 1989 по 2008 годы
+                                  </p>
+                               </div>
+                           </a>
+                       </div>
+
+                       {% for row in result_all_subtypes %}
+                           <div class="element {{ row.3 }}">
+                               <a href="/qdlist/{{ row.4 }}/" class="">
+                               <img src="/static/img/QuantDocs/tn_2.jpg" alt=""/>
+                               <div class="pcap">
+                                  <h4>{{ row.1 }}</h4>
+                                  <p>
+                                      {{ row.2 }}
+                                  </p>
+                               </div>
+                               </a>
+                           </div>
+                       {% endfor %}
+
+                    </div>
+
+    </div>
+  </div>
+
+
+  </div>
+</div>
+
+{% endblock %}

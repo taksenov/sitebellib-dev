@@ -17,6 +17,7 @@ sitebellib.ini
 .idea/
 /temp
 /static/SQLs/
+/migrations/
 
 # ignore at dev-server
 /env
