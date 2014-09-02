@@ -30,7 +30,7 @@
                        <!-- гвоздь-->
                        <div class="element 1">
                            <a href="/qdlist/p/1989/" class="">
-                               <img src="/static/img/QuantDocs/tn_1.jpg" alt=""/>
+                               <img src="/static/img/QuantDocs/tn_0.jpg" alt=""/>
                                <!-- Portfolio caption -->
                                <div class="pcap">
                                   <h4>&laquo;Белоярские вести&raquo;</h4>
@@ -44,7 +44,8 @@
                        {% for row in result_all_subtypes %}
                            <div class="element {{ row.3 }}">
                                <a href="/qdlist/{{ row.4 }}/" class="">
-                               <img src="/static/img/QuantDocs/tn_2.jpg" alt=""/>
+{% comment %}                               <img src="/static/img/QuantDocs/tn_2.jpg" alt=""/>{% endcomment %}
+                                   <img src="/static/img/QuantDocs/tn_{{ row.0 }}.jpg" alt=""/>
                                <div class="pcap">
                                   <h4>{{ row.1 }}</h4>
                                   <p>

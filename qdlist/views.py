@@ -34,7 +34,6 @@ def qdlist(request):
 def qdpselect(request, Year):
     """
 
-
     :param Year:
     :param request:
     :return:
@@ -78,22 +77,40 @@ def qdpselect(request, Year):
                                 }))
     return HttpResponse(html)
 
-def qdspersonal(request):
+def qdspersonal(request, linktypename):
+
+    """
+
+    @param request:
+    @param linktypename:
+    @return:
+    """
+
+    # если в url указан linktypename которого нет в таблице  qdlist_subtype, то вызвать страницу 404
+    if linktypename not in subtype.objects.all().values_list('linktypename', flat=True):
+        raise Http404()
+
     resultsqdlist = connection.cursor()
     resultsqdlist.execute ("""
-    SELECT  l.DomainLinkname
-           ,st.linktypename
-           ,n.NameDocument
-    FROM  qdlist_name n
-         ,qdlist_links l
-         ,qdlist_quantizeddoc qd
-         ,qdlist_subtype st
-    WHERE 1=1
-    AND n.Name_id not in (1, 2)
-    AND n.Name_id = qd.Name_id
-    AND l.Link_id = qd.Link_id
-    ;
-    """)
+        SELECT  l.DomainLinkname
+               ,st.linktypename
+               ,n.NameDocument
+        FROM  qdlist_name n
+             ,qdlist_links l
+             ,qdlist_quantizeddoc qd
+             ,qdlist_subtype st
+        WHERE 1=1
+        AND n.Name_id not in (1, 2)
+        AND n.Name_id = qd.Name_id
+        AND l.Link_id = qd.Link_id
+        AND n.subtype_id = (
+                            SELECT st.subtype_id
+                            FROM qdlist_subtype st
+                            WHERE st.linktypename = %s
+                            )
+        AND n.subtype_id = st.subtype_id
+        ;
+    """, [linktypename])
     resultsqdlist = resultsqdlist.fetchall()
     templ = get_template('QuantDocsTempl.html')
     html = templ.render(Context({'resultsqdlist': resultsqdlist,
