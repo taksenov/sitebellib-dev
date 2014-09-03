@@ -92,9 +92,10 @@ def qdspersonal(request, linktypename):
 
     resultsqdlist = connection.cursor()
     resultsqdlist.execute ("""
-        SELECT  l.DomainLinkname
-               ,st.linktypename
-               ,n.NameDocument
+        SELECT  l.DomainLinkname                          #row.0
+               ,st.linktypename                           #row.1
+               ,n.NameDocument                            #row.2
+               ,n.NameDocumentFull                        #row.3
         FROM  qdlist_name n
              ,qdlist_links l
              ,qdlist_quantizeddoc qd

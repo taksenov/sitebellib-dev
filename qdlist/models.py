@@ -44,7 +44,7 @@ class quantizeddoc(models.Model):
 class name(models.Model):
     Name_id = models.AutoField(primary_key=True)
     NameDocument = models.CharField(max_length=64)
-    NameDocumentFull = models.CharField(max_length=256)
+    NameDocumentFull = models.CharField(max_length=400)
     subtype = models.ForeignKey('subtype',null=True)
 
     def __unicode__(self):
