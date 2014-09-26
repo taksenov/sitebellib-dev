@@ -43,8 +43,9 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Автор</th>
-                                <th>Название</th>
+                                <th></th>
+                                <th>Книга</th>
+                                {% comment %}<th>Название</th>{% endcomment %}
                                 <th>Библиотека</th>
                                 <th>Населенный пункт</th>
                             </tr>
@@ -54,13 +55,93 @@
 
                             {% for row in resultselcat_search %}
 
-                            <tr>
-                                <td>{{ forloop.counter }}</td>
-                                <td>{{ row.0 }} </td>
-                                <td>{{ row.1 }} </td>
-                                <td>{{ row.14 }} </td>
-                                <td>{{ row.15 }} </td>
-                            </tr>
+                                <tr>
+                                    <td>
+                                        {{ forloop.counter }}
+                                    </td>
+                                    <td>
+                                        {% if row.16 == 'Звукозапись' %}
+                                            <i class="icon-music iconElcatType"></i>
+                                        {% else %}
+                                           {% if row.16 == 'Видеозапись' %}
+                                               <i class="icon-film iconElcatType"></i>
+                                           {% else %}
+                                               {% if row.16 == 'Электронный ресурс' %}
+                                                   <i class="icon-vinyl iconElcatType"></i>
+                                               {% else %}
+                                                   <i class="icon-bookthree iconElcatType"></i>
+                                                {% endif %}
+                                           {% endif %}
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <p>
+                                            {% if row.0 == 'null' %}
+                                            {% else %}
+                                               {{ row.0 }}
+                                            {% endif %} {% comment %}Автор{% endcomment %}
+
+                                            </br>
+
+                                            {% if row.1 == 'null' %}
+                                            {% else %}
+                                               {{ row.1 }}
+                                            {% endif %} {% comment %}Название произведения{% endcomment %}
+
+                                            {% if row.16 == 'null' %}
+                                            {% else %}
+                                               {% if row.16 == 'да' %}
+                                                   [ Текст ]
+                                               {% else %}
+                                                   [ {{ row.16 }} ]
+                                               {% endif %}
+                                            {% endif %} {% comment %}content{% endcomment %}
+
+                                            {% if row.10 == 'null' %}
+                                            {% else %}
+                                               ; {{ row.10 }}
+                                            {% endif %} {% comment %}genre {% endcomment %}
+
+                                            {% if row.6 == 'null' %}
+                                            {% else %}
+                                                - {{ row.6 }}
+                                            {% endif %} {% comment %}publisherCity{% endcomment %}
+
+                                            {% if row.5 == 'null' %}
+                                            {% else %}
+                                                : {{ row.5 }}
+                                            {% endif %} {% comment %}publisher{% endcomment %}
+
+                                            {% if row.7 == 'null' %}
+                                            {% else %}
+                                               , {{ row.7 }}
+                                            {% endif %} {% comment %}year{% endcomment %}
+
+                                            {% if row.8 == 'null' %}
+                                            {% else %}
+                                               - {{ row.8 }} c.
+                                            {% endif %} {% comment %}pages{% endcomment %}
+
+                                            {% if row.11 == 'null' %}
+                                            {% else %}
+                                               ; ( {{ row.11 }} )
+                                            {% endif %} {% comment %}series{% endcomment %}
+
+                                            {% if row.9 == 'null' %}
+                                            {% else %}
+                                                - ISBN {{ row.9 }}
+                                            {% endif %} {% comment %}ISBN{% endcomment %}
+
+                                            {% if row.17 == 'null' %}
+                                            {% else %}
+                                               ; {{ row.17 }} <i class="icon-rouble"></i>
+                                            {% endif %} {% comment %}price{% endcomment %}
+
+                                        </p>
+                                    </td>
+                                    <td>{{ row.14 }} </td> {% comment %}библиотека{% endcomment %}
+                                    <td>{{ row.15 }} </td> {% comment %}населденный пункт {% endcomment %}
+                                </tr>
 
                             {% endfor %}
 

@@ -89,6 +89,7 @@ def elcat_search(request):
                        ,lib.Name         AS Library        #библиотека
                        ,lt.Town                            #населденный пункт библиотеки
                        ,c.Name           AS Content        #тип контента
+                       ,b.Price          AS Price          #цена
                 FROM  elcat_book           b
                      ,elcat_author         a
                      ,elcat_publisher      p
@@ -146,6 +147,7 @@ def elcat_search(request):
                        ,lib.Name         AS Library        #библиотека
                        ,lt.Town                            #населденный пункт библиотеки
                        ,c.Name           AS Content        #тип контента
+                       ,b.Price          AS Price          #цена
                 FROM  elcat_book           b
                      ,elcat_author         a
                      ,elcat_publisher      p

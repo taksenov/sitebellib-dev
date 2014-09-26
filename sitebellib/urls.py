@@ -4,6 +4,7 @@ from django.conf.urls import patterns, include, url
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from prolong.views import prolongMain
 import registration
 import profiles
 from profiles.views import edit_profile
@@ -39,6 +40,8 @@ urlpatterns = patterns('django.contrib.flatpages.views',
     url(r'^qdlist/$', qdlist),                        # главная страница с выбором категорий оцифрованных документов
     url(r'^qdlist/p/(\d{4})/$', qdpselect),           # внимание! гвоздь. прибита газета белоярские вести
     url(r'^qdlist/(\w{1})/$', qdspersonal),           # собственные документы библиотеки
+    # Ссылка на страницу продления книг:
+    url(r'^prolong/', prolongMain),
     # Ссылка на страницу с поиском в електронном каталоге:
     url(r'^elcat/', views.elcat_index),
     # Ссылка на страницу с результатами поиска в електронном каталоге:
