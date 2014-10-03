@@ -31,6 +31,7 @@ def blankForm(request):
         SELECT * FROM   blankform_answer;
     """)
     result_all_answers = all_answers.fetchall()
+    request.session._get_or_create_session_key()
     my_session = request.session.session_key
 
     if my_session in clientsession.objects.all().values_list('clientsession', flat=True):
