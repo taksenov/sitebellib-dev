@@ -64,7 +64,7 @@
 
               <tr>
                   <td>{{ forloop.counter }}</td>
-                  <td>{{ row.1 }} (ID={{ row.0 }})</td>
+                  <td>{{ row.1 }}</td>
                   <td>
                       <div class="controls controls__blankform">
 
@@ -75,7 +75,7 @@
                                       {% comment %}&nbsp;{% endcomment %}
                                   </option>
                                   {% for row in result_all_answers %}
-                                      <option>{{ row.1 }} (ID={{ row.0 }})</option>
+                                      <option>{{ row.1 }}</option>
                                   {% endfor %}
                               </select>
 
