@@ -5,6 +5,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 # from prolong.views import prolongMain
+from blankform.views import blankForm, comment
 import registration
 import profiles
 from profiles.views import edit_profile
@@ -42,6 +43,10 @@ urlpatterns = patterns('django.contrib.flatpages.views',
     url(r'^qdlist/(\w{1})/$', qdspersonal),           # собственные документы библиотеки
     # Ссылка на страницу продления книг:
     # url(r'^prolong/', prolongMain),
+    # Ссылка на страницу опроса:
+    url(r'blankform/', blankForm),
+    url(r'commentform/', comment),
+    #-----------------------------
     # Ссылка на страницу с поиском в електронном каталоге:
     url(r'^elcat/', views.elcat_index),
     # Ссылка на страницу с результатами поиска в електронном каталоге:
