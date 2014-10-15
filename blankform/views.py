@@ -31,7 +31,11 @@ def blankForm(request):
         SELECT * FROM   blankform_answer;
     """)
     result_all_answers = all_answers.fetchall()
+    # если нет ключа сессии, то устанавливаем его
+    # если ключ существовал ранее, то берем его из таблицы
     request.session._get_or_create_session_key()
+    # записываем новый ключ в таблицу django_session
+    request.session.set_test_cookie()    
     my_session = request.session.session_key
 
     if my_session in clientsession.objects.all().values_list('clientsession', flat=True):
