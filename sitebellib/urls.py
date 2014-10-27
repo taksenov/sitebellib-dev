@@ -22,6 +22,7 @@ from registration.backends.default.views import RegistrationView
 from registration.forms import RegistrationFormUniqueEmail
 from elcatuserprofile.forms import ProfileForm #, UserForm
 from vknews.views import vknewsView
+from vkphoto.views import vkphotoView
 
 
 class RegistrationViewUniqueEmail(RegistrationView):
@@ -50,6 +51,9 @@ urlpatterns = patterns('django.contrib.flatpages.views',
     #-----------------------------
     # Новости из вконтакта на сайте
     url(r'vknews/', vknewsView),
+    #-----------------------------
+    # Фотогалереи из новостей из вконтакта на сайте (о как!)
+    url(r'vkphoto/', vkphotoView),
     #-----------------------------
     # Ссылка на страницу с поиском в електронном каталоге:
     url(r'^elcat/', views.elcat_index),

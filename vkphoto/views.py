@@ -12,21 +12,22 @@ from django.template import Context, RequestContext
 
 
 # Вывод новостей
-def vknewsView(request):
-    last10newses = connection.cursor()
-    last10newses.execute ("""
+def vkphotoView(request):
+    last30photoes = connection.cursor()
+    last30photoes.execute ("""
         SELECT q.*
-        FROM   vknews_vknews q
-        ORDER BY q.id DESC LIMIT 10
+        FROM   vkphoto_vknews q
+        ORDER BY q.id DESC LIMIT 30
         ;
     """)
-    result_last10newses = last10newses.fetchall()
+    result_last10newses = last30photoes.fetchall()
 
-    # Новости
-    header = 'Новости'
+    # фотогалерея
+    header = 'Фотогалерея'
     # Все самые интересные новости и события из жизни наших библиотек
-    subheader = 'Все самые интересные новости и события из жизни наших библиотек'
+    subheader = 'Фотографии рассказывающие о событиях из жизни наших библиотек'
 
+    # Берем шаблон от vknews (повтороное использование кода), поэтому такое странное название переменных с данными
     # Внимание! Если хочешь не иметь проблем с CSRF
     # то везде используй RequestContext!
     templ = get_template('vknews.html')
